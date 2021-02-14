@@ -1,0 +1,88 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "01/21/2021 16:44:56"
+                                                                                
+// Verilog Test Bench template for design : Communication
+// 
+// Simulation tool : ModelSim (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module Communication_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg Enco_A;
+reg Enco_B;
+reg Enco_Z;
+reg [17:0] addr;
+reg clk;
+reg [15:0] treg_data;
+reg rd_n;
+reg rst_n;
+reg wr_n;
+// wires                                               
+wire [4:0]  dac_add;
+wire dac_cs_n;
+wire [15:0]  dac_data;
+wire dac_re_wr;
+wire [15:0]  data;
+wire led1;
+
+// assign statements (if any)                          
+assign data = treg_data;
+Communication i1 (
+// port map - connection between master ports and signals/registers   
+	.Enco_A(Enco_A),
+	.Enco_B(Enco_B),
+	.Enco_Z(Enco_Z),
+	.addr(addr),
+	.clk(clk),
+	.dac_add(dac_add),
+	.dac_cs_n(dac_cs_n),
+	.dac_data(dac_data),
+	.dac_re_wr(dac_re_wr),
+	.data(data),
+	.led1(led1),
+	.rd_n(rd_n),
+	.rst_n(rst_n),
+	.wr_n(wr_n)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+                                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

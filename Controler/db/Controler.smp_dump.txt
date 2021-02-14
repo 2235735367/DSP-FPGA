@@ -1,0 +1,35 @@
+
+State Machine - |Communication|current_state
+Name current_state.S7 current_state.S6 current_state.S5 current_state.S4 current_state.S3 current_state.S2 current_state.S1 current_state.IDLE 
+current_state.IDLE 0 0 0 0 0 0 0 0 
+current_state.S1 0 0 0 0 0 0 1 1 
+current_state.S2 0 0 0 0 0 1 0 1 
+current_state.S3 0 0 0 0 1 0 0 1 
+current_state.S4 0 0 0 1 0 0 0 1 
+current_state.S5 0 0 1 0 0 0 0 1 
+current_state.S6 0 1 0 0 0 0 0 1 
+current_state.S7 1 0 0 0 0 0 0 1 
+
+State Machine - |Communication|DAC8728:DAC8728_inst|current_state
+Name current_state.S5 current_state.S4 current_state.S3 current_state.S2 current_state.S1 current_state.IDLE 
+current_state.IDLE 0 0 0 0 0 0 
+current_state.S1 0 0 0 0 1 1 
+current_state.S2 0 0 0 1 0 1 
+current_state.S3 0 0 1 0 0 1 
+current_state.S4 0 1 0 0 0 1 
+current_state.S5 1 0 0 0 0 1 
+
+State Machine - |Communication|DAC8728:DAC8728_inst|DAC8728_Drivers:DAC8728_Drivers_inst|current_state
+Name current_state.S11 current_state.S10 current_state.S9 current_state.S8 current_state.S7 current_state.S6 current_state.S5 current_state.S4 current_state.S3 current_state.S2 current_state.S1 current_state.IDLE 
+current_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S1 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S2 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S3 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S4 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S5 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S6 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S7 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S8 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S9 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S10 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.S11 1 0 0 0 0 0 0 0 0 0 0 1 

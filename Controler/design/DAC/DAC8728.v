@@ -1,0 +1,349 @@
+module   DAC8728 #
+(
+	parameter		DELAY   =  32'd100 
+)
+(
+	input		wire				clk			,	
+	input		wire				rst_n		,	
+	input		wire	[4:0]		add_in		,	
+	input		wire	signed [15:0]		data_in		, 	
+	
+	output		reg					done_dac	,	
+	output		wire				dac_re_wr	,	
+	output		wire				dac_cs_n	,	
+	output		wire	[4:0]		dac_add		,	
+	output		wire signed 	[15:0]		dac_data	 	
+);
+
+	reg		[4:0]			add_reg;
+	reg	signed 	[15:0]			data_reg;
+	
+
+	reg						init_done;
+	
+	reg		[31:0]			cnt_delay;	
+
+
+	wire					done;
+	reg						send;
+	reg		[4:0]			add;
+	reg	signed	[15:0]			data;
+	
+
+	reg		[15:0]			current_state;
+	reg		[15:0]			next_state;
+	
+	
+	localparam			IDLE = 6'b000_001;
+	localparam			S1   = 6'b000_010;
+	localparam			S2   = 6'b000_100;
+	localparam			S3   = 6'b001_000;
+	localparam			S4   = 6'b010_000;
+	localparam			S5   = 6'b100_000;
+
+
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			add_reg  <= 5'b00001;
+			data_reg <= 16'b0000_0000_0000_0000;	
+		end
+		else begin
+			if(done) begin
+				add_reg  <= add_in;
+				data_reg <= data_in;
+			end
+			else begin
+				add_reg  <= add_reg;
+				data_reg <= data_reg;
+			end
+		end
+	end	
+	
+
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			current_state <= IDLE;
+		end
+		else begin
+			current_state <= next_state;
+		end
+	end	
+	
+
+	always @ (*) begin
+		if(!rst_n) begin
+			next_state = IDLE;
+		end
+		else begin
+			case (current_state)
+				IDLE : begin		
+					next_state = S1;
+				end
+				
+				S1   : begin		
+					if(cnt_delay >= (DELAY - 1'b1)) begin
+						next_state = S2;
+					end
+					else begin
+						next_state = S1;
+					end
+				end
+				
+				S2   : begin	
+					next_state = S3;
+				end
+				
+				S3   : begin	
+					if(cnt_delay >= (DELAY - 1'b1)) begin
+						next_state = S4;
+					end
+					else begin
+						next_state = S3;
+					end
+				end
+				
+				S4   : begin
+					next_state = S5;
+				end
+				
+				S5   : begin	
+					if(cnt_delay >= (DELAY - 1'b1)) begin
+						next_state = S4;
+					end
+					else begin
+						next_state = S5;
+					end
+				end
+				
+				default: begin
+					next_state = IDLE;
+				end
+			endcase
+		end
+	end
+	
+
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			send <= 1'b0;
+		end
+		else begin
+			case (current_state)
+				IDLE : begin		
+					send <= 1'b0;
+				end
+				
+				S1   : begin		
+					send <= 1'b0;
+				end
+				
+				S2   : begin	
+					send <= 1'b1;
+				end
+				
+				S3   : begin	
+					send <= 1'b0;
+				end
+				
+				S4   : begin	
+					send <= 1'b1;
+				end
+				
+				S5   : begin	
+					send <= 1'b0;
+				end
+				
+				default: begin
+					send <= 1'b0;
+				end
+			endcase
+		end
+	end
+	
+
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			add	<= 5'b00111;
+		end
+		else begin
+			case (current_state)
+				IDLE : begin		
+					add	<= 5'b00111;
+				end
+				
+				S1   : begin		
+					add	<= 5'b00111;
+				end
+				
+				S2   : begin		
+					add	<= 5'b00000;
+				end
+				
+				S3   : begin		
+					add	<= 5'b00000;
+				end
+				
+				S4   : begin		
+					add	<= add_reg;
+				end
+				
+				S5   : begin		
+					add	<= add_reg;
+				end
+				
+				default: begin
+					add	<= 5'b00111;
+				end
+			endcase
+		end
+	end
+	
+
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			data <= 16'h7fff;
+		end
+		else begin
+			case (current_state)
+				IDLE : begin			
+					data <= 16'h7fff;
+				end
+				
+				S1   : begin		
+					data <= 16'h7fff;
+				end
+				
+				S2   : begin		
+					data <= 16'b1000_0001_1000_0000;
+				end
+				
+				S3   : begin		
+					data <= 16'b1000_0001_1000_0000;
+				end
+				
+				S4   : begin	
+					data <= data_reg;
+				end
+				
+				S5   : begin		
+					data <= data_reg;
+				end
+				
+				default: begin
+					data <= 16'h7fff;
+				end
+			endcase
+		end
+	end	
+
+
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			cnt_delay <= 32'd0;
+		end
+		else begin
+			case (next_state)
+				IDLE : begin		
+					cnt_delay <= 32'd0;
+				end
+				
+				S1   : begin		
+					cnt_delay <= cnt_delay + 1'b1;
+				end
+				
+				S2   : begin		
+					cnt_delay <= 32'd0;
+				end
+				
+				S3   : begin		
+					cnt_delay <= cnt_delay + 1'b1;
+				end
+				
+				S4   : begin		
+					cnt_delay <= 32'd0;
+				end
+				
+				S5   : begin		
+					cnt_delay <= cnt_delay + 1'b1;
+				end
+				
+				default: begin
+					cnt_delay <= 32'd0;
+				end
+			endcase
+		end
+	end	
+
+	
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			init_done <= 1'b0;
+		end
+		else begin
+			case (current_state)
+				IDLE : begin		
+					init_done <= 1'b0;
+				end
+				
+				S1   : begin	
+					init_done <= 1'b0;
+				end
+				
+				S2   : begin	
+					init_done <= 1'b0;
+				end
+				
+				S3   : begin	
+					init_done <= 1'b0;
+				end
+				
+				S4   : begin	
+					init_done <= 1'b1;
+				end
+				
+				S5   : begin	
+					init_done <= 1'b1;
+				end
+				
+				default: begin
+					init_done <= 1'b0;
+				end
+			endcase
+		end
+	end	
+
+	
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			done_dac <= 1'b0;
+		end
+		else begin
+			if(init_done) begin
+				if(done) begin
+					done_dac <= 1'b1;
+				end
+				else begin
+					done_dac <= 1'b0;
+				end
+			end
+			else begin
+				done_dac <= 1'b0;
+			end
+		end
+	end
+	
+DAC8728_Drivers  DAC8728_Drivers_inst
+	(
+		.clk				( clk		),	
+		.rst_n				( rst_n		),	
+		.add_in				( add		),	
+		.data_in			( data		), 	
+		.send				( send		),
+		.done				( done		),	
+		.dac_re_wr			( dac_re_wr	),	
+		.dac_cs_n			( dac_cs_n	),	
+		.dac_add			( dac_add	),	
+		.dac_data			( dac_data	) 	
+	);
+
+endmodule

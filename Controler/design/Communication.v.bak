@@ -1,0 +1,589 @@
+module  Communication
+(
+	input		wire				clk,
+	input		wire				rst_n,
+	
+	//DSP input signal
+	input		wire				rd_n,
+	input		wire				wr_n,
+	
+	input		wire	[17:0]		addr,
+	inout		wire	[15:0]		data,
+	
+	// DAC output signal
+	output		wire				dac_re_wr	,	// DAC write and read signal
+	output		wire				dac_cs_n	,	// DAC select chip signal	
+	output		wire	[4:0]		dac_add		,	// DAC registers address
+	output		wire	[15:0]		dac_data	 	// DAC registers data
+
+);
+
+	// dsp signal  register 
+	reg						rd_n_r;
+	reg						rd_n_r1;
+	
+	reg						wr_n_r;
+	reg						wr_n_r1;
+	
+	reg		[17:0]			addr_r;
+	reg		[17:0]			addr_r1;
+
+	reg		[15:0]			data_r;
+	reg		[15:0]			data_r1;
+	
+	// FSM register
+	reg		[10:0]			current_state;
+	reg		[10:0]			next_state;
+	
+	localparam			IDLE = 11'b00_000_000_001;
+	localparam			S1   = 11'b00_000_000_010;
+	localparam			S2   = 11'b00_000_000_100;
+	localparam			S3   = 11'b00_000_001_000;
+	localparam			S4   = 11'b00_000_010_000;
+	localparam			S5   = 11'b00_000_100_000;
+	localparam			S6   = 11'b00_001_000_000;
+	localparam			S7   = 11'b00_010_000_000;
+	
+	localparam			DAC1_ADDR  = 18'h010;
+	localparam			E1_CN_ADD  = 18'h100;
+	localparam			E1_DI_ADD  = 18'h200;
+	localparam			E1_RO_ADD  = 18'h300;
+	
+	localparam			RDACTIVE  = 5'd6;
+	localparam			RDTRAIL   = 5'd4;
+	
+	localparam			WRACTIVE  = 5'd6;
+	localparam			WRTRAIL   = 5'd4;	
+
+	
+	reg		[31:0]			cnt_keep;
+	reg		[31:0]			cnt_trail;
+	
+	reg						flag;
+	reg		[15:0]			data_reg;
+	
+	// encoder register
+	reg		[15:0]			encoder_1_cnt;
+	reg		[15:0]			encoder_1_dir;
+	reg		[15:0]			encoder_1_cir;
+	
+	// dac register
+	reg		[15:0]			dac_1_data;
+	
+	// PLL signal
+	wire 					clk_150;
+	wire 					clk_50;
+	wire					locked_pll;
+	
+	// dac signal
+	reg		[4:0]			add_in_dac;	
+	reg		[15:0]			data_in_dac; 	
+	wire					done_dac;	
+
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> DAC data operation <<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------		
+	always @ (posedge clk_150 or negedge locked_pll) begin
+		if(!locked_pll) begin
+			add_in_dac <= 5'b10111;
+			data_in_dac <= 16'h7fff;
+		end
+		else begin
+			if(done_dac) begin
+				add_in_dac <= 4'b01000;
+				data_in_dac <= dac_1_data;
+			end
+			else begin
+				add_in_dac <= add_in_dac;
+				data_in_dac <= data_in_dac;
+			end
+		end
+	end
+	
+	
+	
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>> Encoder data operation <<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------
+	// encoder data for debug
+	always @ (posedge clk_150 or negedge locked_pll) begin
+		if(!locked_pll) begin
+			encoder_1_cnt <= 16'h0;
+			encoder_1_dir <= 16'h0;
+			encoder_1_cir <= 16'h0;
+		end
+		else begin
+			encoder_1_cnt <= 16'h1111;
+			encoder_1_dir <= 16'h2222;
+			encoder_1_cir <= 16'h3333;
+		end
+	end
+
+	
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> DSP data operation <<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------	
+	// keep input signal
+	always @ (posedge clk_150 or negedge locked_pll) begin
+		if(!locked_pll) begin
+		    rd_n_r1 <= 1'b1;
+			rd_n_r  <= 1'b1;
+		end
+		else begin 
+			rd_n_r1 <= rd_n;
+			rd_n_r  <= rd_n_r1;
+		end
+	end
+	
+	always @ (posedge clk_150 or negedge locked_pll) begin
+		if(!locked_pll) begin
+			wr_n_r1 <= 1'b1;
+			wr_n_r  <= 1'b1;
+		end
+		else begin 
+			wr_n_r1 <= wr_n;
+			wr_n_r  <= wr_n_r1;
+		end
+	end
+	
+	always @ (posedge clk_150 or negedge locked_pll) begin
+		if(!locked_pll) begin
+			addr_r1 <= 18'h0000;
+			addr_r  <= 18'h0000;
+		end
+		else begin 
+			addr_r1 <= addr;
+			addr_r  <= addr_r1;
+		end
+	end
+	
+	always @ (posedge clk_150 or negedge locked_pll) begin
+		if(!locked_pll) begin
+			data_r <= 16'h0000;
+			data_r1  <= 16'h0000;
+		end
+		else begin 
+			data_r1 <= data;
+			data_r  <= data_r1;
+		end
+	end
+	
+	// FSM-1
+	always @ (posedge clk_150 or negedge locked_pll) begin
+		if(!locked_pll) begin
+			current_state <= IDLE;
+		end
+		else begin
+			current_state <= next_state;
+		end
+	end 
+	
+	// FSM-2
+	always @ (*) begin
+		if(!locked_pll) begin
+			next_state <= IDLE;
+		end
+		else begin
+			case (current_state)
+				IDLE : begin
+					if(!wr_n_r)begin
+						next_state = S1;
+					end
+					else if(!rd_n_r)begin
+						next_state = S2;
+					end
+					else begin
+						next_state = IDLE;
+					end
+				end
+				
+				S1   : begin	//DSP write DAC1 data 
+					if(cnt_keep >= (WRACTIVE - 1'b1))begin
+						next_state = S6;
+					end
+					else begin
+						next_state = S1;
+					end
+				end
+				
+				S2   : begin		// DSP read data
+					if(addr_r == E1_CN_ADD)begin
+						next_state = S3;
+					end
+					else if(addr_r == E1_DI_ADD)begin
+						next_state = S4;
+					end
+					else if(addr_r == E1_RO_ADD)begin
+						next_state = S5;
+					end
+					else begin
+						next_state = IDLE;
+					end
+				end
+				
+				S3   : begin		// DSP read encoder 1 cont 
+					if(cnt_keep >= (RDACTIVE - 1'b1))begin
+						next_state = S7;
+					end
+					else begin
+						next_state = S3;
+					end
+				end
+				
+				S4   : begin		// DSP read encoder 1 direction
+					if(cnt_keep >= (RDACTIVE - 1'b1))begin
+						next_state = S7;
+					end
+					else begin
+						next_state = S4;
+					end
+				end
+				
+				S5   : begin		// DSP read encoder 1 round
+					if(cnt_keep >= (RDACTIVE - 1'b1))begin
+						next_state = S7;
+					end
+					else begin
+						next_state = S5;
+					end
+				end
+				
+				S6   : begin		// write trail time
+					if(cnt_trail >= (WRTRAIL - 1'b1))begin
+						next_state = IDLE;
+					end
+					else begin
+						next_state = S6;
+					end
+				end
+				
+				S7   : begin		// read trail time
+					if(cnt_trail >= (RDTRAIL - 1'b1))begin
+						next_state = IDLE;
+					end
+					else begin
+						next_state = S7;
+					end
+				end
+				
+				default: begin
+					next_state = IDLE;
+				end
+			endcase
+		end
+	end
+	
+	// FSM-3
+	// flag signal  and data signal
+	always @ (posedge clk_150 or negedge locked_pll) begin
+		if(!locked_pll) begin
+			flag <= 1'b0;
+		end
+		else begin
+			case (current_state) 
+				IDLE : begin
+					flag <= 1'b0;
+				end
+				
+				S1   : begin
+					flag <= 1'b0;
+				end
+				
+				S2   : begin
+					flag <= 1'b0;
+				end
+				
+				S3   : begin
+					flag <= 1'b1;
+				end
+				
+				S4   : begin
+					flag <= 1'b1;
+				end
+				
+				S5   : begin
+					flag <= 1'b1;
+				end
+				
+				S6   : begin
+					flag <= 1'b0;
+				end
+				
+				S7   : begin
+					flag <= 1'b0;
+				end
+			
+				default : begin
+					flag <= 1'b0;
+				end
+			endcase
+		end
+	end
+	
+		assign  data = (flag)?data_reg:16'hzzzz;
+	
+	// data_reg signal
+	always @ (posedge clk_150 or negedge locked_pll) begin
+		if(!locked_pll) begin
+			data_reg <= 16'h0000;
+		end
+		else begin
+			case (current_state) 
+				IDLE : begin
+					data_reg <= data_reg;
+				end
+				
+				S1   : begin
+					data_reg <= data_reg;
+				end
+				
+				S2   : begin
+					data_reg <= data_reg;
+				end
+				
+				S3   : begin
+					data_reg <= encoder_1_cnt;
+				end
+				
+				S4   : begin
+					data_reg <= encoder_1_dir;
+				end
+				
+				S5   : begin
+					data_reg <= encoder_1_cir;
+				end
+				
+				S6   : begin
+					data_reg <= data_reg;
+				end
+				
+				S7   : begin
+					data_reg <= data_reg;
+				end
+			
+				default : begin
+					data_reg <= 16'h0000;
+				end
+			endcase
+		end
+	end
+
+	// dac_1_data signal
+	always @ (posedge clk_150 or negedge locked_pll) begin
+		if(!locked_pll) begin
+			dac_1_data <= 16'h7fff;
+		end
+		else begin
+			case (current_state) 
+				IDLE : begin
+					dac_1_data <= dac_1_data;
+				end
+				
+				S1   : begin
+					dac_1_data <= data_r;
+				end
+				
+				S2   : begin
+					dac_1_data <= dac_1_data;
+				end
+				
+				S3   : begin
+					dac_1_data <= dac_1_data;
+				end
+				
+				S4   : begin
+					dac_1_data <= dac_1_data;
+				end
+				
+				S5   : begin
+					dac_1_data <= dac_1_data;
+				end
+				
+				S6   : begin
+					dac_1_data <= dac_1_data;
+				end
+				
+				S7   : begin
+					dac_1_data <= dac_1_data;
+				end
+			
+				default : begin
+					dac_1_data <= 16'h7fff;
+				end
+			endcase
+		end
+	end
+	
+	// cnt_keep signal
+	always @ (posedge clk_150 or negedge locked_pll) begin
+		if(!locked_pll) begin
+			cnt_keep <= 32'd0;
+		end
+		else begin
+			case (next_state) 
+				IDLE : begin
+					cnt_keep <= 32'd0;
+				end
+				
+				S1   : begin
+					cnt_keep <= cnt_keep + 1'd1;
+				end
+				
+				S2   : begin
+					cnt_keep <= 32'd0;
+				end
+				
+				S3   : begin
+					cnt_keep <= cnt_keep + 1'd1;
+				end
+				
+				S4   : begin
+					cnt_keep <= cnt_keep + 1'd1;
+				end
+				
+				S5   : begin
+					cnt_keep <= cnt_keep + 1'd1;
+				end
+				
+				S6   : begin
+					cnt_keep <= 32'd0;
+				end
+				
+				S7   : begin
+					cnt_keep <= 32'd0;
+				end
+			
+				default : begin
+					cnt_keep <= 32'd0;
+				end
+			endcase
+		end
+	end	
+	
+	// cnt_trail signal
+	always @ (posedge clk_150 or negedge locked_pll) begin
+		if(!locked_pll) begin
+			cnt_trail <= 32'd0;
+		end
+		else begin
+			case (next_state) 
+				IDLE : begin
+					cnt_trail <= 32'd0;
+				end
+				
+				S1   : begin
+					cnt_trail <= 32'd0;
+				end
+				
+				S2   : begin
+					cnt_trail <= 32'd0;
+				end
+				
+				S3   : begin
+					cnt_trail <= 32'd0;
+				end
+				
+				S4   : begin
+					cnt_trail <= 32'd0;
+				end
+				
+				S5   : begin
+					cnt_trail <= 32'd0;
+				end
+				
+				S6   : begin
+					cnt_trail <= cnt_trail + 1'd1;
+				end
+				
+				S7   : begin
+					cnt_trail <= cnt_trail + 1'd1;
+				end
+			
+				default : begin
+					cnt_trail <= 32'd0;
+				end
+			endcase
+		end
+	end
+	
+PLL	PLL_inst 
+	(
+		.areset 				( !rst_n	 ),
+		.inclk0 				( clk		 ),
+		.c0 					( clk_150	 ),
+		.c1 					( clk_50	 ),
+		.locked 				( locked_pll )
+	);
+	
+   DAC8728 #
+	(
+		.DEVIDE					( 32'd5 	 ),
+		.DELAY 					( 32'd100 	 )
+	)
+	DAC8728_inst
+	(
+		.clk					( clk_50	 ),	// drivers work clock
+		.rst_n					( locked_pll ),	// drivers reset signal
+		.add_in					( add_in_dac ),	// address signal	
+		.data_in				( data_in_dac), 	// data signal
+		.dac_done				( done_dac   ),	// transfer done signal 0:working... 1: worked	
+		.dac_re_wr				( dac_re_wr	 ),	// DAC write and read signal
+		.dac_cs_n				( dac_cs_n   ),	// DAC select chip signal	
+		.dac_add				( dac_add	 ),	// DAC registers address
+		.dac_data				( dac_data	 ) 	// DAC registers data
+	);
+		
+
+endmodule
+
+
+//---------------- end ----------------
+
+
+//////////////////////////////////////////////////////////	
+//	always @ (posedge clk_150 or negedge locked_pll) begin
+//		if(!locked_pll) begin
+//			
+//		end
+//		else begin
+//			case (current_state) 
+//				IDLE : begin
+//				
+//				end
+//				
+//				S1   : begin
+//				
+//				end
+//				
+//				S2   : begin
+//				
+//				end
+//				
+//				S3   : begin
+//				
+//				end
+//				
+//				S4   : begin
+//				
+//				end
+//				
+//				S5   : begin
+//				
+//				end
+//				
+//				S6   : begin
+//				
+//				end
+//				
+//				S7   : begin
+//				
+//				end
+//			
+//				default : begin
+//				
+//				end
+//			endcase
+//		end
+//	end	
+	
+	

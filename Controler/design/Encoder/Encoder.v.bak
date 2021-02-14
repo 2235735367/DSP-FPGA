@@ -1,0 +1,338 @@
+module   Encoder  #
+(
+	parameter		ENCO_NUM = 32'd1000						// 
+)
+(	
+	input	wire				clk		,					// systerm clock
+	input	wire				rst_n	,					// systerm reset
+	input	wire				Enco_A	,					// encoder A input signal
+	input	wire				Enco_B	,					// encoder B input signal
+	input	wire				Enco_Z	,					// encoder Z input signal
+	output	reg		[1:0]		motor_dir,					// motor direction
+	output	reg		[15:0]		motor_cnt,					// motor count data
+	output	reg		[15:0]		motor_cir					// motor's number of turns 
+);
+
+//-------------------------------------------------
+// encoder signal synchronize
+	wire				Enco_A_r ;
+	reg					Enco_A_r1;
+	reg					Enco_A_r2;
+	reg					Enco_A_r3;
+	
+	//---------------------------------------------
+	// encoder A  signal synchronize	
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			Enco_A_r1 <= 1'b0;
+			Enco_A_r2 <= 1'b0;
+			Enco_A_r3 <= 1'b0;
+		end
+		else begin
+			Enco_A_r1 <= Enco_A;
+			Enco_A_r2 <= Enco_A_r1;
+			Enco_A_r3 <= Enco_A_r2;
+		end
+	end
+	
+	assign  Enco_A_r = Enco_A_r3;
+	//----------------------------------------------
+	
+	wire				Enco_B_r ;
+	reg					Enco_B_r1;
+	reg					Enco_B_r2;
+	reg					Enco_B_r3;	
+	
+	//----------------------------------------------
+	// encoder B signal synchronize	
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			Enco_B_r1 <= 1'b0;
+			Enco_B_r2 <= 1'b0;
+			Enco_B_r3 <= 1'b0;
+		end
+		else begin
+			Enco_B_r1 <= Enco_B;
+			Enco_B_r2 <= Enco_B_r1;
+			Enco_B_r3 <= Enco_B_r2;
+		end
+	end
+	
+	assign  Enco_B_r = Enco_B_r3;
+	//----------------------------------------------
+	
+	wire				Enco_Z_r ;
+	reg					Enco_Z_r1;
+	reg					Enco_Z_r2;
+	reg					Enco_Z_r3;
+	
+	//----------------------------------------------
+	// encoder C signal synchronize	
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			Enco_Z_r1 <= 1'b0;
+			Enco_Z_r2 <= 1'b0;
+			Enco_Z_r3 <= 1'b0;
+		end
+		else begin
+			Enco_Z_r1 <= Enco_Z;
+			Enco_Z_r2 <= Enco_Z_r1;
+			Enco_Z_r3 <= Enco_Z_r2;
+		end
+	end
+	
+	assign  Enco_Z_r = Enco_Z_r3;
+	//----------------------------------------------
+
+//-------------------------------------------------
+//  edge detection
+	// A edge detection
+	
+	reg					Enco_A_pos;
+	reg					Enco_A_neg;
+	reg					Enco_A_temp;
+	
+	//---------------------------------------------
+	// delay 	
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			Enco_A_temp <= 1'b0;
+		end
+		else begin
+			Enco_A_temp <= Enco_A_r;
+		end
+	end
+	//---------------------------------------------
+	
+	//---------------------------------------------
+	// get the posedge	
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			Enco_A_pos <= 1'b0;
+		end
+		else begin
+			if((Enco_A_temp == 1'b0)&&(Enco_A_r == 1'b1))begin
+				Enco_A_pos <= 1'b1;
+			end
+			else begin
+				Enco_A_pos <= 1'b0;
+			end
+		end
+	end
+	//---------------------------------------------
+	
+	//---------------------------------------------
+	// get the negedge
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			Enco_A_neg <= 1'b0;
+		end
+		else begin
+			if((Enco_A_temp == 1'b1)&&(Enco_A_r == 1'b0))begin
+				Enco_A_neg <= 1'b1;
+			end
+			else begin
+				Enco_A_neg <= 1'b0;
+			end
+		end
+	end
+	//---------------------------------------------	
+	
+	
+	//---------------------------------------------	
+	// B edge detection
+	
+	reg					Enco_B_pos;
+	reg					Enco_B_neg;
+	reg					Enco_B_temp;
+	
+	//---------------------------------------------
+	//delay 	
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			Enco_B_temp <= 1'b0;
+		end
+		else begin
+			Enco_B_temp <= Enco_B_r;
+		end
+	end
+	//---------------------------------------------
+	
+	//---------------------------------------------
+	// get the posedge
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			Enco_B_pos <= 1'b0;
+		end
+		else begin
+			if((Enco_B_temp == 1'b0)&&(Enco_B_r == 1'b1))begin
+				Enco_B_pos <= 1'b1;
+			end
+			else begin
+				Enco_B_pos <= 1'b0;
+			end
+		end
+	end
+	//---------------------------------------------
+	
+	//---------------------------------------------
+	//get the negedge
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			Enco_B_neg <= 1'b0;
+		end
+		else begin
+			if((Enco_B_temp == 1'b1)&&(Enco_B_r == 1'b0))begin
+				Enco_B_neg <= 1'b1;
+			end
+			else begin
+				Enco_B_neg <= 1'b0;
+			end
+		end
+	end
+	//---------------------------------------------	
+	
+	//---------------------------------------------	
+	// Z edge detection
+	
+	reg					Enco_Z_pos;
+	reg					Enco_Z_temp;
+	
+	//---------------------------------------------
+	// delay 
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			Enco_Z_temp <= 1'b0;
+		end
+		else begin
+			Enco_Z_temp <= Enco_Z_r;
+		end
+	end
+	//---------------------------------------------
+	
+	//---------------------------------------------
+	// get the posedge	
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			Enco_Z_pos <= 1'b0;
+		end
+		else begin
+			if((Enco_Z_temp == 1'b0)&&(Enco_Z_r == 1'b1))begin
+				Enco_Z_pos <= 1'b1;
+			end
+			else begin
+				Enco_Z_pos <= 1'b0;
+			end
+		end
+	end
+	//---------------------------------------------
+
+
+//-------------------------------------------------
+// get the direction
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+		motor_dir <= 2'b00;
+		end
+		else begin
+			if((Enco_A_r == 1'b1)&&(Enco_B_r == 1'b0)&&(Enco_A_pos == 1'b1))begin
+				motor_dir <= 2'b01;				//direction positive
+			end
+			else if((Enco_A_r == 1'b1)&&(Enco_B_r == 1'b1)&&(Enco_A_pos == 1'b1)) begin
+				motor_dir <= 2'b10;				// direction negative
+			end
+			else begin
+				motor_dir <= motor_dir;	
+			end
+		end
+	end
+	//---------------------------------------------	
+	
+//-------------------------------------------------
+// get the speed count
+
+	localparam		ENCO_NUM_MAX = (ENCO_NUM << 2);
+	reg				Enco_flag;
+	
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			Enco_flag <= 1'b0;
+		end
+		else begin
+			if(Enco_A_pos == 1'b1)begin
+				Enco_flag <= 1'b1;
+			end
+			else if(Enco_B_pos == 1'b1) begin
+				Enco_flag <= 1'b1;
+			end
+			else if(Enco_A_neg == 1'b1) begin
+				Enco_flag <= 1'b1;
+			end
+			else if(Enco_B_neg == 1'b1) begin
+				Enco_flag <= 1'b1;
+			end
+			else begin
+				Enco_flag <= 1'b0;
+			end
+		end
+	end
+	
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			motor_cnt <= 1'b0;
+		end
+		else begin
+			if(Enco_flag == 1'b1) begin
+				motor_cnt <= motor_cnt + 1'b1;
+			end
+			else begin
+				motor_cnt <= motor_cnt;
+			end
+		end
+	end
+	//---------------------------------------------	
+
+	
+//-------------------------------------------------
+// get the number of turns
+	
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			motor_cir <= 1'd0;
+		end
+		else  begin
+			if((motor_dir == 2'b01)&&(Enco_Z_pos == 1'b1))begin
+				motor_cir <= motor_cir + 1'd1;
+			end
+			else if((motor_dir == 2'b10)&&(Enco_Z_pos == 1'b1)) begin
+				motor_cir <= motor_cir - 1'd1;
+			end
+			else begin
+				motor_cir <= motor_cir;
+			end
+		end
+	end
+
+
+
+endmodule
+
+
+//------------ no more------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

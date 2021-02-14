@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Feb 07 22:00:59 2021
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : Controler
+Top-level Entity Name : Communication
+Family : Cyclone III
+Device : EP3C16Q240C8
+Timing Models : Final
+Total logic elements : 1,536 / 15,408 ( 10 % )
+    Total combinational functions : 950 / 15,408 ( 6 % )
+    Dedicated logic registers : 1,279 / 15,408 ( 8 % )
+Total registers : 1279
+Total pins : 65 / 161 ( 40 % )
+Total virtual pins : 0
+Total memory bits : 37,888 / 516,096 ( 7 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

@@ -1,0 +1,132 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\Project\IntelFPGA\Controler_20190521\simulation\modelsim
+T_opt
+VNP^^]S<Fd3o1=P<092O^n3
+04 2 4 work TB fast 0
+=1-9c5c8e9715ce-5ce38f91-70-30e4
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.1c;51
+vCommunication
+IZ?z=PLh6QzS>4e3j5ET]T3
+VQ=;[P_0lJD<e9F_0fSB8o1
+Z1 dE:\Project\IntelFPGA\Controler_20190521\simulation\modelsim
+w1558417238
+8E:/Project/IntelFPGA/Controler_20190521/design/Communication.v
+FE:/Project/IntelFPGA/Controler_20190521/design/Communication.v
+L0 1
+Z2 OL;L;10.1c;51
+r1
+31
+Z3 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@communication
+!i10b 1
+!s100 Bc]iXS1HBhKD1Q];_m4ze3
+!s85 0
+!s108 1558417296.199000
+!s107 E:/Project/IntelFPGA/Controler_20190521/design/Communication.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Project/IntelFPGA/Controler_20190521/design|E:/Project/IntelFPGA/Controler_20190521/design/Communication.v|
+!s92 -vlog01compat -work work +incdir+E:/Project/IntelFPGA/Controler_20190521/design -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vDAC8728
+IjHm>2djYoeaWbQMCPFkB=2
+V7[kl6IG:kYfGIR7>OC@]51
+R1
+w1558283429
+8E:/Project/IntelFPGA/Controler_20190521/design/DAC/DAC8728.v
+FE:/Project/IntelFPGA/Controler_20190521/design/DAC/DAC8728.v
+L0 1
+R2
+r1
+31
+R3
+Z4 !s92 -vlog01compat -work work +incdir+E:/Project/IntelFPGA/Controler_20190521/design/DAC -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@d@a@c8728
+!i10b 1
+!s100 d^HL7gi_4`XM^]JXmJL?l1
+!s85 0
+!s108 1558417296.024000
+!s107 E:/Project/IntelFPGA/Controler_20190521/design/DAC/DAC8728.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Project/IntelFPGA/Controler_20190521/design/DAC|E:/Project/IntelFPGA/Controler_20190521/design/DAC/DAC8728.v|
+vDAC8728_Drivers
+IJ24^DN]d2EaWIVJJAM:QJ1
+VLG6K^_nG?9=5aJmm]Y:Ji0
+R1
+w1558282569
+8E:/Project/IntelFPGA/Controler_20190521/design/DAC/DAC8728_Drivers.v
+FE:/Project/IntelFPGA/Controler_20190521/design/DAC/DAC8728_Drivers.v
+L0 2
+R2
+r1
+31
+R3
+n@d@a@c8728_@drivers
+R4
+!i10b 1
+!s100 acM4gA29mcalV0[_VlWL43
+!s85 0
+!s108 1558417295.824000
+!s107 E:/Project/IntelFPGA/Controler_20190521/design/DAC/DAC8728_Drivers.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Project/IntelFPGA/Controler_20190521/design/DAC|E:/Project/IntelFPGA/Controler_20190521/design/DAC/DAC8728_Drivers.v|
+vPLL
+IJ0anOAV;R<58Wk6o=_37`0
+VA14@CQ]zI4dZWEgGB`Lkz1
+R1
+w1558400788
+8E:/Project/IntelFPGA/Controler_20190521/IP/PLL.v
+FE:/Project/IntelFPGA/Controler_20190521/IP/PLL.v
+L0 39
+R2
+r1
+31
+R3
+n@p@l@l
+!i10b 1
+!s100 ^CC?<HP`8ZaBTB?=7O9Ye0
+!s85 0
+!s108 1558417296.388000
+!s107 E:/Project/IntelFPGA/Controler_20190521/IP/PLL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Project/IntelFPGA/Controler_20190521/IP|E:/Project/IntelFPGA/Controler_20190521/IP/PLL.v|
+!s92 -vlog01compat -work work +incdir+E:/Project/IntelFPGA/Controler_20190521/IP -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vPLL_altpll
+ISLWek@JY0f?mYePX<QKhU3
+VDEVoo@z0kBdhP<U7>^e2A1
+R1
+w1558402013
+8E:/Project/IntelFPGA/Controler_20190521/db/pll_altpll.v
+FE:/Project/IntelFPGA/Controler_20190521/db/pll_altpll.v
+L0 30
+R2
+r1
+31
+R3
+n@p@l@l_altpll
+!i10b 1
+!s100 gMJX>]j:ckWLUk2C1JgBN1
+!s85 0
+!s108 1558417296.578000
+!s107 E:/Project/IntelFPGA/Controler_20190521/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Project/IntelFPGA/Controler_20190521/db|E:/Project/IntelFPGA/Controler_20190521/db/pll_altpll.v|
+!s92 -vlog01compat -work work +incdir+E:/Project/IntelFPGA/Controler_20190521/db -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vTB
+IhbSGAVT:6J<UKYA5eWJ@J2
+Vc<=32996OT2f`M7E_UhYX1
+R1
+w1558402904
+8E:/Project/IntelFPGA/Controler_20190521/sim/TB.v
+FE:/Project/IntelFPGA/Controler_20190521/sim/TB.v
+L0 3
+R2
+r1
+31
+R3
+n@t@b
+!i10b 1
+!s100 ]cAL`lied5gHZ=jgPJ2l20
+!s85 0
+!s108 1558417296.738000
+!s107 E:/Project/IntelFPGA/Controler_20190521/sim/TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Project/IntelFPGA/Controler_20190521/sim|E:/Project/IntelFPGA/Controler_20190521/sim/TB.v|
+!s92 -vlog01compat -work work +incdir+E:/Project/IntelFPGA/Controler_20190521/sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

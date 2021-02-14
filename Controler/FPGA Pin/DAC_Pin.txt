@@ -1,0 +1,24 @@
+To,   Location
+dac_add[4]				,			PIN_159				
+dac_add[3]				,			PIN_146			
+dac_add[2]				,			PIN_147			
+dac_add[1]				,			PIN_83 			
+dac_add[0]				,			PIN_49 			
+dac_cs_n				,			PIN_177			
+dac_data[15]			,			PIN_187			
+dac_data[14]			,			PIN_188			
+dac_data[13]			,			PIN_185			
+dac_data[12]			,			PIN_186			
+dac_data[11]			,			PIN_183			
+dac_data[10]			,			PIN_184			
+dac_data[9]				,			PIN_181			
+dac_data[8]				,			PIN_182			
+dac_data[7]				,			PIN_176			
+dac_data[6]				,			PIN_173			
+dac_data[5]				,			PIN_168			
+dac_data[4]				,			PIN_169			
+dac_data[3]				,			PIN_166			
+dac_data[2]				,			PIN_167			
+dac_data[1]				,			PIN_164			
+dac_data[0]				,			PIN_160			
+dac_re_wr				,			PIN_171			
