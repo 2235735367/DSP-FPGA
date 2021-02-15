@@ -1,0 +1,34 @@
+Added Component: Designator=U1(OPA4277_SOIC)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U3(OPA4277_SOIC)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=DAC_OUT_1 Pin=U1-1
+Added Pin To Net: NetName=NetR1_1 Pin=U1-2
+Added Pin To Net: NetName=NetU1_3 Pin=U1-3
+Added Pin To Net: NetName=NetC7_1 Pin=U1-4
+Added Pin To Net: NetName=NetU1_5 Pin=U1-5
+Added Pin To Net: NetName=NetR2_1 Pin=U1-6
+Added Pin To Net: NetName=DAC_OUT_2 Pin=U1-7
+Added Pin To Net: NetName=DAC_OUT_3 Pin=U1-8
+Added Pin To Net: NetName=NetR3_1 Pin=U1-9
+Added Pin To Net: NetName=NetU1_10 Pin=U1-10
+Added Pin To Net: NetName=NetC20_1 Pin=U1-11
+Added Pin To Net: NetName=NetU1_12 Pin=U1-12
+Added Pin To Net: NetName=NetR7_1 Pin=U1-13
+Added Pin To Net: NetName=DAC_OUT_4 Pin=U1-14
+Added Pin To Net: NetName=DAC_OUT_5 Pin=U3-1
+Added Pin To Net: NetName=NetR13_1 Pin=U3-2
+Added Pin To Net: NetName=NetU2_44 Pin=U3-3
+Added Pin To Net: NetName=NetC24_1 Pin=U3-4
+Added Pin To Net: NetName=NetU2_42 Pin=U3-5
+Added Pin To Net: NetName=NetR15_1 Pin=U3-6
+Added Pin To Net: NetName=DAC_OUT_6 Pin=U3-7
+Added Pin To Net: NetName=DAC_OUT_7 Pin=U3-8
+Added Pin To Net: NetName=NetR16_1 Pin=U3-9
+Added Pin To Net: NetName=NetU2_39 Pin=U3-10
+Added Pin To Net: NetName=NetC35_1 Pin=U3-11
+Added Pin To Net: NetName=NetU2_36 Pin=U3-12
+Added Pin To Net: NetName=NetR17_1 Pin=U3-13
+Added Pin To Net: NetName=DAC_OUT_8 Pin=U3-14
+Added Member To Class: ClassName=DAC Member=Component U1 OPA4277
+Added Member To Class: ClassName=DAC Member=Component U3 OPA4277

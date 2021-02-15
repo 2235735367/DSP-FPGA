@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=PWM_WIDTH_6- Pin=JP14-5
+Removed Pin From Net: NetName=PWM_WIDTH_6+ Pin=JP14-6
+Added Pin To Net: NetName=PWM_WIDTH_6+ Pin=JP14-5
+Added Pin To Net: NetName=PWM_WIDTH_6- Pin=JP14-6

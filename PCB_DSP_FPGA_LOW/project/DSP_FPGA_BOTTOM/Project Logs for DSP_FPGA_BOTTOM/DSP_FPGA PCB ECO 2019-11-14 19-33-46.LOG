@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=NetJP12_2 Pin=JP12-1
+Removed Pin From Net: NetName=NetJP12_1 Pin=JP12-2
+Change Component Footprint: Designator=P31 Old Footprint=4.2接插件8P New Footprint=connector5569R
+Change Component Footprint: Designator=P33 Old Footprint=4.2接插件8P New Footprint=connector5569R
+Change Component Footprint: Designator=JP23 Old Footprint=PHB2.0-LI-2x8P New Footprint=4.2接插件18P
+Added Pin To Net: NetName=NetJP12_1 Pin=JP12-1
+Added Pin To Net: NetName=NetJP12_2 Pin=JP12-2

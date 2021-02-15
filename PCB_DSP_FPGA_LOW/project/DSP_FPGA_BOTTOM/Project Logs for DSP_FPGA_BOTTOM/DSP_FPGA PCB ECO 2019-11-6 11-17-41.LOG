@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=GND Pin=JP24-1
+Change component parameters: Designator = "JP24"; Footprint = "KF128-3.81-3P"; UniqueID = "\VNKTZRER"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "3P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters: Designator = "S1"; Footprint = "SK-22D02"; UniqueID = "\NTFGVIGW"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "波动开关"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=AGND Pin=JP24-1
+Change Net Name : Old Net Name=NetJP24_2 New Net Name=+12Vin
+Change Net Name : Old Net Name=NetJP24_3 New Net Name=-12Vin

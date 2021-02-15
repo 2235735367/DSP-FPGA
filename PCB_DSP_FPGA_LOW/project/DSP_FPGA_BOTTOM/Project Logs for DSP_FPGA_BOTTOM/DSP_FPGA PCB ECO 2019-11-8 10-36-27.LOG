@@ -1,0 +1,38 @@
+Change component parameters: Designator = "JP24"; Footprint = "KF128-3.81-3P"; UniqueID = "\VNKTZRER"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "3P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP27"; Footprint = "KF128-3.81-2P"; UniqueID = "\ZTBFVCFM"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters: Designator = "S1"; Footprint = "SK-22D02"; UniqueID = "\NTFGVIGW"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "波动开关"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters: Designator = "S2"; Footprint = "SK-22D02"; UniqueID = "\VEKUHZTA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "波动开关"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+12V Pin=C23-1
+Added Pin To Net: NetName=+12V Pin=C34-1
+Added Pin To Net: NetName=+12V Pin=C39-1
+Added Pin To Net: NetName=+12V Pin=C45-1
+Added Pin To Net: NetName=AVDD Pin=C142-2
+Added Pin To Net: NetName=AVDD Pin=C157-2
+Added Pin To Net: NetName=AVDD Pin=C167-1
+Added Pin To Net: NetName=AVDD Pin=D6-2
+Added Pin To Net: NetName=+12V Pin=L4-2
+Added Pin To Net: NetName=+12V Pin=L6-2
+Added Pin To Net: NetName=+12V Pin=L8-2
+Added Pin To Net: NetName=+12V Pin=L9-2
+Added Pin To Net: NetName=AVDD Pin=L30-2
+Added Pin To Net: NetName=AVDD Pin=U34-4
+Change Net Name : Old Net Name=AVDD New Net Name=-12V
+Added Member To Class: ClassName=Power Member=Component C139 Cap Pol3
+Added Member To Class: ClassName=Power Member=Component C140 Cap
+Added Member To Class: ClassName=Power Member=Component R291 Res1

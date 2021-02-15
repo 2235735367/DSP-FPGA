@@ -1,0 +1,347 @@
+Removed Pin From Net: NetName=DGND Pin=C104-1
+Removed Pin From Net: NetName=+5V Pin=C104-2
+Removed Pin From Net: NetName=DGND Pin=C105-1
+Removed Pin From Net: NetName=+3.3V Pin=C105-2
+Removed Pin From Net: NetName=DGND Pin=C108-1
+Removed Pin From Net: NetName=En5_B_P Pin=C108-2
+Removed Pin From Net: NetName=DGND Pin=C110-1
+Removed Pin From Net: NetName=En5_Z_P Pin=C110-2
+Removed Pin From Net: NetName=DGND Pin=C113-1
+Removed Pin From Net: NetName=+5V Pin=C113-2
+Removed Pin From Net: NetName=DGND Pin=C115-1
+Removed Pin From Net: NetName=En6_A_P Pin=C115-2
+Removed Pin From Net: NetName=DGND Pin=C118-1
+Removed Pin From Net: NetName=En6_B_N Pin=C118-2
+Removed Pin From Net: NetName=DGND Pin=C119-1
+Removed Pin From Net: NetName=En6_Z_P Pin=C119-2
+Removed Pin From Net: NetName=+12V Pin=C142-1
+Removed Pin From Net: NetName=-12V Pin=C142-2
+Removed Pin From Net: NetName=+12V Pin=C150-2
+Removed Pin From Net: NetName=+12V Pin=C151-2
+Removed Pin From Net: NetName=-12V Pin=C157-2
+Removed Pin From Net: NetName=-12V Pin=C167-1
+Removed Pin From Net: NetName=+12V Pin=C167-2
+Removed Pin From Net: NetName=+5V Pin=C192-1
+Removed Pin From Net: NetName=DGND Pin=C192-2
+Removed Pin From Net: NetName=+3.3V Pin=C193-1
+Removed Pin From Net: NetName=DGND Pin=C193-2
+Removed Pin From Net: NetName=+5V Pin=C196-2
+Removed Pin From Net: NetName=+5V Pin=C198-1
+Removed Pin From Net: NetName=DGND Pin=C198-2
+Removed Pin From Net: NetName=+5V Pin=C203-1
+Removed Pin From Net: NetName=DGND Pin=C203-2
+Removed Pin From Net: NetName=+5V Pin=C206-1
+Removed Pin From Net: NetName=DGND Pin=C206-2
+Removed Pin From Net: NetName=+5V Pin=C207-2
+Removed Pin From Net: NetName=-12V Pin=D6-2
+Removed Pin From Net: NetName=NetJP12_2 Pin=JP12-1
+Removed Pin From Net: NetName=NetJP12_1 Pin=JP12-2
+Removed Pin From Net: NetName=Enconder05_B+ Pin=L24-1
+Removed Pin From Net: NetName=Enconder05_B- Pin=L24-2
+Removed Pin From Net: NetName=NetL24_3 Pin=L24-3
+Removed Pin From Net: NetName=NetL24_4 Pin=L24-4
+Removed Pin From Net: NetName=+12V Pin=L29-2
+Removed Pin From Net: NetName=-12V Pin=L30-2
+Removed Pin From Net: NetName=NetL33_1 Pin=L33-1
+Removed Pin From Net: NetName=+3.3V Pin=L33-2
+Removed Pin From Net: NetName=NetL23_4 Pin=R120-1
+Removed Pin From Net: NetName=En5_A_P Pin=R120-2
+Removed Pin From Net: NetName=En5_A_P Pin=R121-1
+Removed Pin From Net: NetName=+5V Pin=R121-2
+Removed Pin From Net: NetName=En5_A_N Pin=R122-1
+Removed Pin From Net: NetName=+5V Pin=R122-2
+Removed Pin From Net: NetName=+12V Pin=R303-1
+Removed Pin From Net: NetName=+5V Pin=R328-1
+Removed Pin From Net: NetName=NetR328_2 Pin=R328-2
+Removed Pin From Net: NetName=AGND Pin=R329-1
+Removed Pin From Net: NetName=DGND Pin=R329-2
+Removed Pin From Net: NetName=NetR330_1 Pin=R330-1
+Removed Pin From Net: NetName=DGND Pin=R330-2
+Removed Pin From Net: NetName=+5V Pin=U14-1
+Removed Pin From Net: NetName=DGND Pin=U14-2
+Removed Pin From Net: NetName=NetU14_3 Pin=U14-3
+Removed Pin From Net: NetName=NetU14_4 Pin=U14-4
+Removed Pin From Net: NetName=NetU14_5 Pin=U14-5
+Removed Pin From Net: NetName=DGND Pin=U14-8
+Removed Pin From Net: NetName=DGND Pin=U14-9
+Removed Pin From Net: NetName=DGND Pin=U14-10
+Removed Pin From Net: NetName=F_Enconder05_Z Pin=U14-12
+Removed Pin From Net: NetName=F_Enconder05_B Pin=U14-13
+Removed Pin From Net: NetName=F_Enconder05_A Pin=U14-14
+Removed Pin From Net: NetName=DGND Pin=U14-15
+Removed Pin From Net: NetName=+3.3V Pin=U14-16
+Removed Pin From Net: NetName=En5_A_N Pin=U15-1
+Removed Pin From Net: NetName=En5_A_P Pin=U15-2
+Removed Pin From Net: NetName=NetU14_3 Pin=U15-3
+Removed Pin From Net: NetName=+5V Pin=U15-4
+Removed Pin From Net: NetName=NetU14_4 Pin=U15-5
+Removed Pin From Net: NetName=En5_B_P Pin=U15-6
+Removed Pin From Net: NetName=En5_B_N Pin=U15-7
+Removed Pin From Net: NetName=DGND Pin=U15-8
+Removed Pin From Net: NetName=En5_Z_N Pin=U15-9
+Removed Pin From Net: NetName=En5_Z_P Pin=U15-10
+Removed Pin From Net: NetName=NetU14_5 Pin=U15-11
+Removed Pin From Net: NetName=DGND Pin=U15-12
+Removed Pin From Net: NetName=+5V Pin=U15-16
+Removed Pin From Net: NetName=+12V Pin=U33-2
+Removed Pin From Net: NetName=-12V Pin=U34-4
+Removed Pin From Net: NetName=+12V Pin=U34-7
+Removed Pin From Net: NetName=PWM_WIDTH_OUT_1 Pin=U52-1
+Removed Pin From Net: NetName=PWM_WIDTH_1+ Pin=U52-2
+Removed Pin From Net: NetName=PWM_WIDTH_1- Pin=U52-3
+Removed Pin From Net: NetName=+5V Pin=U52-4
+Removed Pin From Net: NetName=PWM_WIDTH_2- Pin=U52-5
+Removed Pin From Net: NetName=PWM_WIDTH_2+ Pin=U52-6
+Removed Pin From Net: NetName=PWM_WIDTH_OUT_2 Pin=U52-7
+Removed Pin From Net: NetName=PWM_WIDTH_OUT_3 Pin=U52-9
+Removed Pin From Net: NetName=PWM_WIDTH_3+ Pin=U52-10
+Removed Pin From Net: NetName=PWM_WIDTH_3- Pin=U52-11
+Removed Pin From Net: NetName=DGND Pin=U52-12
+Removed Pin From Net: NetName=+5V Pin=U52-16
+Removed Pin From Net: NetName=PWM_WIDTH_OUT_4 Pin=U53-1
+Removed Pin From Net: NetName=PWM_WIDTH_4+ Pin=U53-2
+Removed Pin From Net: NetName=PWM_WIDTH_4- Pin=U53-3
+Removed Pin From Net: NetName=PWM_WIDTH_5- Pin=U53-5
+Removed Pin From Net: NetName=PWM_WIDTH_5+ Pin=U53-6
+Removed Pin From Net: NetName=PWM_WIDTH_OUT_5 Pin=U53-7
+Removed Pin From Net: NetName=PWM_WIDTH_OUT_6 Pin=U53-9
+Removed Pin From Net: NetName=PWM_WIDTH_6+ Pin=U53-10
+Removed Pin From Net: NetName=PWM_WIDTH_6- Pin=U53-11
+Removed Member From Class: ClassName=PWM_WIDTH Member=R120
+Removed Member From Class: ClassName=Power Member=R121
+Removed Member From Class: ClassName=PWM_WIDTH Member=U15
+Change Component Footprint: Designator=L33 Old Footprint=2029 New Footprint=ACM3225-601-2P
+Change Component Footprint: Designator=U52 Old Footprint=D016_N New Footprint=ADUM1410ARWZ_SOIC
+Change Component Footprint: Designator=U53 Old Footprint=D016_N New Footprint=AM26LS32AC_SOP
+Change Component Comment : Designator=U52 Old Comment=AM26LS31CD New Comment=ADUM1410ARWZ
+Change Component Comment : Designator=U53 Old Comment=AM26LS31CD New Comment=AM26LS32AC
+Change Component Comment : Designator=U15 Old Comment=AM26LS32AC New Comment=Cap
+Change Component Comment : Designator=L33 Old Comment=Inductor New Comment=ACM3225-601-2P
+Change Component Comment : Designator=R120 Old Comment=Res1 New Comment=Cap
+Change Component Comment : Designator=R121 Old Comment=Res1 New Comment=Cap
+Change Component Designator: OldDesignator=C192 NewDesignator=C104
+Change Component Designator: OldDesignator=C193 NewDesignator=C105
+Change Component Designator: OldDesignator=C196 NewDesignator=C108
+Change Component Designator: OldDesignator=C198 NewDesignator=C110
+Change Component Designator: OldDesignator=C201 NewDesignator=C113
+Change Component Designator: OldDesignator=C203 NewDesignator=C115
+Change Component Designator: OldDesignator=C206 NewDesignator=C118
+Change Component Designator: OldDesignator=C207 NewDesignator=C119
+Change Component Designator: OldDesignator=L33 NewDesignator=L24
+Change Component Designator: OldDesignator=R120 NewDesignator=C192
+Change Component Designator: OldDesignator=R121 NewDesignator=C193
+Change Component Designator: OldDesignator=R328 NewDesignator=R120
+Change Component Designator: OldDesignator=R329 NewDesignator=R121
+Change Component Designator: OldDesignator=R330 NewDesignator=R122
+Change Component Designator: OldDesignator=U15 NewDesignator=C196
+Change Component Designator: OldDesignator=U52 NewDesignator=U14
+Change Component Designator: OldDesignator=U53 NewDesignator=U15
+Change component parameters: Designator = "JP1" ("JP1"); Footprint = "CONNECTOR5569R"; UniqueID = "\VSVQEQMJ" ("\VSVQEQMJ")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "4*2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP2" ("JP2"); Footprint = "CONNECTOR5569R"; UniqueID = "\EJHRJBJD" ("\EJHRJBJD")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "4*2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP3" ("JP3"); Footprint = "CONNECTOR5569R"; UniqueID = "\UQEGFTWF" ("\UQEGFTWF")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "4*2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP4" ("JP4"); Footprint = "CONNECTOR5569R"; UniqueID = "\WGAWCDXW" ("\WGAWCDXW")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "4*2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP5" ("JP5"); Footprint = "CONNECTOR5569R"; UniqueID = "\GBIFCGCE" ("\GBIFCGCE")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "4*2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP6" ("JP6"); Footprint = "CONNECTOR5569R"; UniqueID = "\JPFTESHS" ("\JPFTESHS")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "4*2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP7" ("JP7"); Footprint = "ZH1.5-WI-5P"; UniqueID = "\XTEAJTMZ" ("\XTEAJTMZ")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "5P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP8" ("JP8"); Footprint = "ZH1.5-WI-5P"; UniqueID = "\PYNOWBLR" ("\PYNOWBLR")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "5P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP9" ("JP9"); Footprint = "ZH1.5-WI-5P"; UniqueID = "\WHSCSNVO" ("\WHSCSNVO")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "5P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP10" ("JP10"); Footprint = "ZH1.5-WI-5P"; UniqueID = "\HPAFKOBS" ("\HPAFKOBS")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "5P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP11" ("JP11"); Footprint = "ZH1.5-WI-3P"; UniqueID = "\UVBXGQFH" ("\UVBXGQFH")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "3P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP12" ("JP12"); Footprint = "ZH1.5-WI-3P"; UniqueID = "\UHFNOJYO" ("\UHFNOJYO")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "3P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP13" ("JP13"); Footprint = "XH2.54-WI-7P"; UniqueID = "\WISQAOOU" ("\WISQAOOU")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "7P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP14" ("JP14"); Footprint = "XH2.54-WI-7P"; UniqueID = "\WIFSOFUN" ("\WIFSOFUN")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "7P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP15" ("JP15"); Footprint = "MX 1.25-WI-2P"; UniqueID = "\MWUMLGIW" ("\MWUMLGIW")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP16" ("JP16"); Footprint = "MX 1.25-WI-2P"; UniqueID = "\JYZJZLPT" ("\JYZJZLPT")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP17" ("JP17"); Footprint = "MX 1.25-WI-2P"; UniqueID = "\XMAJIZOK" ("\XMAJIZOK")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP18" ("JP18"); Footprint = "MX 1.25-WI-2P"; UniqueID = "\IGKEBNAJ" ("\IGKEBNAJ")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP19" ("JP19"); Footprint = "MX 1.25-WI-2P"; UniqueID = "\IZFYKYHD" ("\IZFYKYHD")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP20" ("JP20"); Footprint = "MX 1.25-WI-2P"; UniqueID = "\DXVCZFGU" ("\DXVCZFGU")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP21" ("JP21"); Footprint = "MX 1.25-WI-2P"; UniqueID = "\TSZMGRAN" ("\TSZMGRAN")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP22" ("JP22"); Footprint = "MX 1.25-WI-2P"; UniqueID = "\TTPEPWQX" ("\TTPEPWQX")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP23" ("JP23"); Footprint = "CONNECTOR558916PIN"; UniqueID = "\ECASYLVU" ("\ECASYLVU")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "8*2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP24" ("JP24"); Footprint = "KF128-3.81-3P"; UniqueID = "\VNKTZRER" ("\VNKTZRER")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "3P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP25" ("JP25"); Footprint = "XH2.54-WI-7P"; UniqueID = "\XXAJHGRE" ("\XXAJHGRE")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "7P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP26" ("JP26"); Footprint = "XH2.54-WI-7P"; UniqueID = "\DVKWAGFP" ("\DVKWAGFP")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "7P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP27" ("JP27"); Footprint = "KF128-3.81-2P"; UniqueID = "\ZTBFVCFM" ("\ZTBFVCFM")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "2P接插件"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "S1" ("S1"); Footprint = "SK-22D02"; UniqueID = "\NTFGVIGW" ("\NTFGVIGW")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "波动开关"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "S2" ("S2"); Footprint = "SK-22D02"; UniqueID = "\VEKUHZTA" ("\VEKUHZTA")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "波动开关"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C138" ("C138"); Footprint = "RB7.6-15"; UniqueID = "\EIJMWUVJ" ("\EIJMWUVJ")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "Polarized Capacitor (Radial); 2 Leads"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "RB7.6-15"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "470uF@35V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C139" ("C139"); Footprint = "RB7.6-15"; UniqueID = "\QFVBUAOF" ("\QFVBUAOF")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "Polarized Capacitor (Radial); 2 Leads"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "RB7.6-15"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "470uF@16V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C142" ("C142"); Footprint = "RB7.6-15"; UniqueID = "\TQGUVOJT" ("\TQGUVOJT")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "Polarized Capacitor (Radial); 2 Leads"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "RB7.6-15"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "470uF@35V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=DGND Pin=C104-1
+Added Pin To Net: NetName=+5V Pin=C104-2
+Added Pin To Net: NetName=DGND Pin=C105-1
+Added Pin To Net: NetName=+3.3V Pin=C105-2
+Added Pin To Net: NetName=En5_B_P Pin=C108-2
+Added Pin To Net: NetName=DGND Pin=C110-1
+Added Pin To Net: NetName=En5_Z_P Pin=C110-2
+Added Pin To Net: NetName=DGND Pin=C115-1
+Added Pin To Net: NetName=En6_A_P Pin=C115-2
+Added Pin To Net: NetName=DGND Pin=C118-1
+Added Pin To Net: NetName=En6_B_N Pin=C118-2
+Added Pin To Net: NetName=En6_Z_P Pin=C119-2
+Added Pin To Net: NetName=-12V Pin=C142-1
+Added Pin To Net: NetName=+12V Pin=C142-2
+Added Pin To Net: NetName=-12V Pin=C150-2
+Added Pin To Net: NetName=-12V Pin=C151-2
+Added Pin To Net: NetName=+12V Pin=C157-2
+Added Pin To Net: NetName=+12V Pin=C167-1
+Added Pin To Net: NetName=-12V Pin=C167-2
+Added Pin To Net: NetName=+5V Pin=C192-1
+Added Pin To Net: NetName=DGND Pin=C192-2
+Added Pin To Net: NetName=+3.3V Pin=C193-1
+Added Pin To Net: NetName=DGND Pin=C193-2
+Added Pin To Net: NetName=DGND Pin=C196-1
+Added Pin To Net: NetName=+5V Pin=C196-2
+Added Pin To Net: NetName=+12V Pin=D6-2
+Added Pin To Net: NetName=NetJP12_1 Pin=JP12-1
+Added Pin To Net: NetName=NetJP12_2 Pin=JP12-2
+Added Pin To Net: NetName=Enconder05_B+ Pin=L24-1
+Added Pin To Net: NetName=Enconder05_B+ Pin=L24-1
+Added Pin To Net: NetName=Enconder05_B- Pin=L24-2
+Added Pin To Net: NetName=NetL24_3 Pin=L24-3
+Added Pin To Net: NetName=NetL24_4 Pin=L24-4
+Added Pin To Net: NetName=-12V Pin=L29-2
+Added Pin To Net: NetName=+12V Pin=L30-2
+Added Pin To Net: NetName=NetL23_4 Pin=R120-1
+Added Pin To Net: NetName=En5_A_P Pin=R120-2
+Added Pin To Net: NetName=En5_A_P Pin=R121-1
+Added Pin To Net: NetName=+5V Pin=R121-2
+Added Pin To Net: NetName=En5_A_N Pin=R122-1
+Added Pin To Net: NetName=+5V Pin=R122-2
+Added Pin To Net: NetName=-12V Pin=R303-1
+Added Pin To Net: NetName=+5V Pin=U14-1
+Added Pin To Net: NetName=DGND Pin=U14-2
+Added Pin To Net: NetName=NetU14_3 Pin=U14-3
+Added Pin To Net: NetName=NetU14_4 Pin=U14-4
+Added Pin To Net: NetName=NetU14_5 Pin=U14-5
+Added Pin To Net: NetName=DGND Pin=U14-9
+Added Pin To Net: NetName=DGND Pin=U14-10
+Added Pin To Net: NetName=F_Enconder05_Z Pin=U14-12
+Added Pin To Net: NetName=F_Enconder05_B Pin=U14-13
+Added Pin To Net: NetName=F_Enconder05_A Pin=U14-14
+Added Pin To Net: NetName=DGND Pin=U14-15
+Added Pin To Net: NetName=+3.3V Pin=U14-16
+Added Pin To Net: NetName=En5_A_N Pin=U15-1
+Added Pin To Net: NetName=En5_A_P Pin=U15-2
+Added Pin To Net: NetName=NetU14_3 Pin=U15-3
+Added Pin To Net: NetName=NetU14_4 Pin=U15-5
+Added Pin To Net: NetName=En5_B_P Pin=U15-6
+Added Pin To Net: NetName=En5_B_N Pin=U15-7
+Added Pin To Net: NetName=En5_Z_N Pin=U15-9
+Added Pin To Net: NetName=En5_Z_P Pin=U15-10
+Added Pin To Net: NetName=NetU14_5 Pin=U15-11
+Added Pin To Net: NetName=-12V Pin=U33-2
+Added Pin To Net: NetName=+12V Pin=U34-4
+Added Pin To Net: NetName=-12V Pin=U34-7
+Change Net Name : Old Net Name=+12V New Net Name=-12V
+Change Net Name : Old Net Name=-12V New Net Name=+12V
+PCB-ECO: Change Pad Pin/Pkg Length: Old=0mm New=20mm
