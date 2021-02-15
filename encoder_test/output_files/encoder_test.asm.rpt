@@ -1,5 +1,5 @@
 Assembler report for encoder_test
-Sun Feb 07 19:23:30 2021
+Mon Feb 15 23:47:09 2021
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -11,7 +11,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
   3. Assembler Settings
   4. Assembler Encrypted IP Cores Summary
   5. Assembler Generated Files
-  6. Assembler Device Options: C:/Users/22357/Desktop/encoder_test/output_files/encoder_test.sof
+  6. Assembler Device Options: E:/GIT/Motion Controller/encoder_test/output_files/encoder_test.sof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Feb 07 19:23:30 2021 ;
+; Assembler Status      ; Successful - Mon Feb 15 23:47:09 2021 ;
 ; Revision Name         ; encoder_test                          ;
 ; Top-level Entity Name ; encoder_test                          ;
 ; Family                ; Cyclone III                           ;
@@ -85,27 +85,28 @@ applicable agreement for further details.
 +--------+------------------------+--------------+
 ; Altera ; Signal Tap (6AF7 BCE1) ; Licensed     ;
 ; Altera ; Signal Tap (6AF7 BCEC) ; Licensed     ;
+; Altera ; Signal Tap (6AF8 BCEC) ; Licensed     ;
 +--------+------------------------+--------------+
 
 
-+-------------------------------------------------------------------+
-; Assembler Generated Files                                         ;
-+-------------------------------------------------------------------+
-; File Name                                                         ;
-+-------------------------------------------------------------------+
-; C:/Users/22357/Desktop/encoder_test/output_files/encoder_test.sof ;
-+-------------------------------------------------------------------+
++---------------------------------------------------------------------+
+; Assembler Generated Files                                           ;
++---------------------------------------------------------------------+
+; File Name                                                           ;
++---------------------------------------------------------------------+
+; E:/GIT/Motion Controller/encoder_test/output_files/encoder_test.sof ;
++---------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/22357/Desktop/encoder_test/output_files/encoder_test.sof ;
-+----------------+----------------------------------------------------------------------------+
-; Option         ; Setting                                                                    ;
-+----------------+----------------------------------------------------------------------------+
-; Device         ; EP3C16Q240C8                                                               ;
-; JTAG usercode  ; 0x001607C8                                                                 ;
-; Checksum       ; 0x001607C8                                                                 ;
-+----------------+----------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Assembler Device Options: E:/GIT/Motion Controller/encoder_test/output_files/encoder_test.sof ;
++----------------+------------------------------------------------------------------------------+
+; Option         ; Setting                                                                      ;
++----------------+------------------------------------------------------------------------------+
+; Device         ; EP3C16Q240C8                                                                 ;
+; JTAG usercode  ; 0x0014D7F3                                                                   ;
+; Checksum       ; 0x0014D7F3                                                                   ;
++----------------+------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -114,13 +115,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Sun Feb 07 19:23:29 2021
+    Info: Processing started: Mon Feb 15 23:47:08 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off encoder_test -c encoder_test
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4589 megabytes
-    Info: Processing ended: Sun Feb 07 19:23:30 2021
+    Info: Peak virtual memory: 4593 megabytes
+    Info: Processing ended: Mon Feb 15 23:47:09 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

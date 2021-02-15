@@ -11,8 +11,8 @@ module   encoder_test  #
     input	wire				Enco_Z	,//编码器Z信号
     output  wire                encoder ,
     
-    output	reg	signed 	[15:0]		motor_cnt,		
-	output	reg	signed	[15:0]		motor_cir,	
+    output	reg	signed 	[15:0]		motor_cnt,	//单圈脉冲	
+	output	reg	signed	[15:0]		motor_cir,	//圈数
     output	reg		[1:0]		    motor_dir	//转向
 );
 
@@ -67,28 +67,7 @@ module   encoder_test  #
     assign enco_B_2edag = Enco_B_r2^Enco_B_r3;   //双沿
     
     assign encoder      = enco_A_2edag^enco_B_2edag;//编码器4倍频
-    
-/*定义两个寄存器，将编码器信号延后1拍、2拍.对信号的上升沿进行判断*/
-	reg					Enco_Z_r1;
-	reg					Enco_Z_r2;
-	reg					Enco_Z_r3;   
-    wire				Enco_Z_pos;//上升沿
-		
-	always @ (posedge clk  or  negedge rst_n) begin
-		if(!rst_n) begin
-			Enco_Z_r1 <= 1'b0;
-			Enco_Z_r2 <= 1'b0;
-			Enco_Z_r3 <= 1'b0;
-		end
-		else begin
-			Enco_Z_r1 <= Enco_Z;
-			Enco_Z_r2 <= Enco_Z_r1;
-			Enco_Z_r3 <= Enco_Z_r2;
-		end
-	end
-    
-	assign Enco_Z_pos = Enco_Z_r2 &(~Enco_B_r3); //上升沿
-    
+       
     /*通过对上升沿和A、B两相高低电平来判断电机旋转方向*/
     always @ (posedge clk  or  negedge rst_n) begin
         if(!rst_n) begin
@@ -108,12 +87,10 @@ module   encoder_test  #
     end
     
  /*对4倍频后的脉冲数进行计数*/
-    reg signed [15:0]  motor_cnt_temp;
     
 	always @ (posedge clk  or  negedge rst_n) begin
 		if(!rst_n) begin
-			motor_cnt_temp <= 16'd0;
-            motor_cnt      <= 16'd0;
+            motor_cnt <= 16'd0;
 		end
 		else begin
             if(encoder == 1'b1)begin
@@ -121,21 +98,50 @@ module   encoder_test  #
 					motor_cnt <= 16'd0;
 				end
                 else if(motor_dir == 2'b01)begin
-					motor_cnt_temp <= motor_cnt_temp - 1'd1;
-                    motor_cnt      <= motor_cnt_temp;
+					motor_cnt <= motor_cnt - 1'd1;
 				end
 				else if(motor_dir == 2'b10)begin
-					motor_cnt_temp <= motor_cnt_temp + 1'd1;
-                    motor_cnt      <= motor_cnt_temp;
+					motor_cnt <= motor_cnt + 1'd1;
 				end
             end
 		end
-	end    
-
-
+	end
     
+    /*定义两个寄存器，将编码器信号延后1拍、2拍.对信号的上升沿进行判断*/
+	reg					Enco_Z_r1;
+	reg					Enco_Z_r2;
+	reg					Enco_Z_r3;   
+    wire				Enco_Z_pos;//上升沿
+		
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+			Enco_Z_r1 <= 1'b0;
+			Enco_Z_r2 <= 1'b0;
+			Enco_Z_r3 <= 1'b0;
+		end
+		else begin
+			Enco_Z_r1 <= Enco_Z;
+			Enco_Z_r2 <= Enco_Z_r1;
+			Enco_Z_r3 <= Enco_Z_r2;
+		end
+	end
     
-
+	assign Enco_Z_pos = Enco_Z_r2 &(~Enco_Z_r3); //上升沿
+    
+	always @ (posedge clk  or  negedge rst_n) begin
+		if(!rst_n) begin
+            motor_cir <= 16'b0;
+		end
+        else begin
+            if((Enco_Z_pos == 1'b1)&&(motor_dir == 2'b01)) begin
+                motor_cir <= motor_cir - 1'b1;
+            end
+            if((Enco_Z_pos == 1'b1)&&(motor_dir == 2'b10)) begin
+                motor_cir <= motor_cir + 1'b1;
+            end
+        end
+    end
+    
 endmodule
 	
 	

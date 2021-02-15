@@ -33,9 +33,9 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/Users/22357/Desktop/encoder_test {C:/Users/22357/Desktop/encoder_test/encoder_test.v}
+vlog -vlog01compat -work work +incdir+E:/GIT/Motion\ Controller/encoder_test {E:/GIT/Motion Controller/encoder_test/encoder_test.v}
 
-vlog -vlog01compat -work work +incdir+C:/Users/22357/Desktop/encoder_test/simulation/modelsim {C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test.vt}
+vlog -vlog01compat -work work +incdir+E:/GIT/Motion\ Controller/encoder_test/simulation/modelsim {E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test.vt}
 
 vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  encoder_test_vlg_tst
 

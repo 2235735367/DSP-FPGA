@@ -17,7 +17,7 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "01/22/2021 13:36:07"
+// Generated on "02/15/2021 22:25:17"
                                                                                 
 // Verilog Test Bench template for design : encoder_test
 // 
@@ -36,6 +36,10 @@ reg Enco_Z;
 reg clk;
 reg rst_n;
 // wires                                               
+wire encoder;
+wire [15:0]  motor_cir;
+wire [15:0]  motor_cnt;
+wire [1:0]   motor_dir;
 
 // assign statements (if any)                          
 encoder_test i1 (
@@ -44,31 +48,35 @@ encoder_test i1 (
 	.Enco_B(Enco_B),
 	.Enco_Z(Enco_Z),
 	.clk(clk),
+	.encoder(encoder),
+	.motor_cir(motor_cir),
+	.motor_cnt(motor_cnt),
+	.motor_dir(motor_dir),
 	.rst_n(rst_n)
 );
 initial                                                
 begin                                                  
-    clk     =   1'b0;
-    rst_n   =   1'b0;
-    Enco_A  =   1'b0;
-    Enco_B  =   1'b0;
-    Enco_Z  =   1'b0;
-    
-    #150   rst_n = 1'b1;
-    
-    #100000 $stop;
+   clk    = 1'b0;
+   rst_n  = 1'b0;
+   Enco_A = 1'b0;
+   Enco_B = 1'b0;
+   Enco_Z = 1'b0;
+   #100 rst_n = 1'b1;
+   #10000 $stop;
+   
 end                                                    
-always  #10 clk = ~clk;
-
-always  begin
-    #200   Enco_A = ~Enco_A;
-    #200   Enco_B = ~Enco_B;
-    #200   Enco_A = ~Enco_A;
-    #200   Enco_B = ~Enco_B;  
+always #10 clk = ~clk ; 
+always begin
+    #100 Enco_A = 1'b1;
+    #100 Enco_B = 1'b1;
+    #100 Enco_A = 1'b0;
+    #100 Enco_B = 1'b0;
 end
 
-
-                                                 
-                                                                   
+always begin
+    #1000 Enco_Z = 1'b1;
+    #100  Enco_Z = 1'b0;
+end                                               
+                                         
 endmodule
 

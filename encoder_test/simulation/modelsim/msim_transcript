@@ -30,7 +30,7 @@
 #          Updated modelsim.ini.
 # vlog -vlog01compat -work altera_ver {f:/software1/quartusll_13.1/altera/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 19:27:38 on Feb 07,2021
+# Start time: 23:04:46 on Feb 15,2021
 # vlog -reportprogress 300 -vlog01compat -work altera_ver f:/software1/quartusll_13.1/altera/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -108,7 +108,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 19:27:38 on Feb 07,2021, Elapsed time: 0:00:00
+# End time: 23:04:46 on Feb 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -120,7 +120,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {f:/software1/quartusll_13.1/altera/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 19:27:38 on Feb 07,2021
+# Start time: 23:04:46 on Feb 15,2021
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver f:/software1/quartusll_13.1/altera/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -184,7 +184,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 19:27:38 on Feb 07,2021, Elapsed time: 0:00:00
+# End time: 23:04:46 on Feb 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -196,7 +196,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {f:/software1/quartusll_13.1/altera/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 19:27:38 on Feb 07,2021
+# Start time: 23:04:46 on Feb 15,2021
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver f:/software1/quartusll_13.1/altera/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -238,7 +238,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 19:27:38 on Feb 07,2021, Elapsed time: 0:00:00
+# End time: 23:04:46 on Feb 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -250,7 +250,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {f:/software1/quartusll_13.1/altera/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 19:27:39 on Feb 07,2021
+# Start time: 23:04:46 on Feb 15,2021
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver f:/software1/quartusll_13.1/altera/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -375,7 +375,7 @@
 # 	altserial_flash_loader
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 19:27:39 on Feb 07,2021, Elapsed time: 0:00:00
+# End time: 23:04:47 on Feb 15,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -387,7 +387,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {f:/software1/quartusll_13.1/altera/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 19:27:39 on Feb 07,2021
+# Start time: 23:04:47 on Feb 15,2021
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver f:/software1/quartusll_13.1/altera/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -450,7 +450,7 @@
 # 	altera_pll_reconfig_tasks
 # 	altera_syncram
 # 	altera_pll
-# End time: 19:27:40 on Feb 07,2021, Elapsed time: 0:00:01
+# End time: 23:04:47 on Feb 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cycloneiii_ver
@@ -462,7 +462,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cycloneiii_ver {f:/software1/quartusll_13.1/altera/quartus/eda/sim_lib/cycloneiii_atoms.v}
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 19:27:40 on Feb 07,2021
+# Start time: 23:04:48 on Feb 15,2021
 # vlog -reportprogress 300 -vlog01compat -work cycloneiii_ver f:/software1/quartusll_13.1/altera/quartus/eda/sim_lib/cycloneiii_atoms.v 
 # -- Compiling UDP CYCLONEIII_PRIM_DFFE
 # -- Compiling UDP CYCLONEIII_PRIM_DFFEAS
@@ -538,131 +538,82 @@
 # 	cycloneiii_jtag
 # 	cycloneiii_crcblock
 # 	cycloneiii_oscillator
-# End time: 19:27:40 on Feb 07,2021, Elapsed time: 0:00:00
+# End time: 23:04:48 on Feb 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is 22357@LAPTOP-COH3APQM.
+# 
 # vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# 
 # vmap work rtl_work
 # Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
 # vmap -modelsim_quiet work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/22357/Desktop/encoder_test {C:/Users/22357/Desktop/encoder_test/encoder_test.v}
+# vlog -vlog01compat -work work +incdir+E:/GIT/Motion\ Controller/encoder_test {E:/GIT/Motion Controller/encoder_test/encoder_test.v}
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 19:27:40 on Feb 07,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/22357/Desktop/encoder_test" C:/Users/22357/Desktop/encoder_test/encoder_test.v 
+# Start time: 23:04:48 on Feb 15,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIT/Motion Controller/encoder_test" E:/GIT/Motion Controller/encoder_test/encoder_test.v 
 # -- Compiling module encoder_test
 # 
 # Top level modules:
 # 	encoder_test
-# End time: 19:27:40 on Feb 07,2021, Elapsed time: 0:00:00
+# End time: 23:04:48 on Feb 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/22357/Desktop/encoder_test/simulation/modelsim {C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test.vt}
+# vlog -vlog01compat -work work +incdir+E:/GIT/Motion\ Controller/encoder_test/simulation/modelsim {E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test.vt}
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 19:27:40 on Feb 07,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/22357/Desktop/encoder_test/simulation/modelsim" C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test.vt 
+# Start time: 23:04:48 on Feb 15,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIT/Motion Controller/encoder_test/simulation/modelsim" E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test.vt 
 # -- Compiling module encoder_test_vlg_tst
 # 
 # Top level modules:
 # 	encoder_test_vlg_tst
-# End time: 19:27:40 on Feb 07,2021, Elapsed time: 0:00:00
+# End time: 23:04:48 on Feb 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  encoder_test_vlg_tst
 # vsim -gui "+altera" -l msim_transcript -do "encoder_test_run_msim_rtl_verilog.do" 
-# Start time: 19:27:41 on Feb 07,2021
+# Start time: 23:04:48 on Feb 15,2021
 # ** Note: (vsim-3812) Design is being optimized...
-# 
-# ** Warning: C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test.vt(41): (vopt-2685) [TFMPC] - Too few port connections for 'i1'.  Expected 9, found 5.
-# 
-# ** Warning: C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test.vt(41): (vopt-2718) [TFMPC] - Missing connection for port 'motor_dir'.
-# 
-# ** Warning: C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test.vt(41): (vopt-2718) [TFMPC] - Missing connection for port 'motor_cir'.
-# 
-# ** Warning: C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test.vt(41): (vopt-2718) [TFMPC] - Missing connection for port 'motor_cnt'.
-# 
-# ** Warning: C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test.vt(41): (vopt-2718) [TFMPC] - Missing connection for port 'encoder'.
 # 
 # Loading work.encoder_test_vlg_tst(fast)
 # Loading work.encoder_test(fast)
-# Trace back: Error QStructure::sort: invalid command name ""
-#   <6:proc:11: ::QStructure::sort .main_pane.structure 0 ascending
-#   <5:eval:1: ::QStructure::structsort .main_pane.structure 0 ascending
-#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 0 ascending
-#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 0 ascending
-#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
-#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: 22357  Hostname: LAPTOP-COH3APQM  ProcessID: 19816
+# 
+#           Attempting to use alternate WLF file "./wlft89icny".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft89icny
+# 
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test.vt(59)
-#    Time: 100150 ns  Iteration: 0  Instance: /encoder_test_vlg_tst
-# Break in Module encoder_test_vlg_tst at C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test.vt line 59
+# ** Note: $stop    : E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test.vt(65)
+#    Time: 10100 ns  Iteration: 0  Instance: /encoder_test_vlg_tst
+# Break in Module encoder_test_vlg_tst at E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test.vt line 65
 add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/motor_cnt
-add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/Enco_A_pos
-add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/Enco_A_neg
-add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/enco_A_2edag
-add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/Enco_B_pos
-add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/Enco_B_neg
-add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/enco_B_2edag
-add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/motor_cir
-add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/motor_dir
+sim:/encoder_test_vlg_tst/i1/Enco_Z_pos
 restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
 # 
 # Loading work.encoder_test_vlg_tst(fast)
 # Loading work.encoder_test(fast)
 run
-restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# 
-# Loading work.encoder_test_vlg_tst(fast)
-# Loading work.encoder_test(fast)
 run
-# Causality operation skipped due to absence of debug database file
-add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/encoder
-restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# 
-# Loading work.encoder_test_vlg_tst(fast)
-# Loading work.encoder_test(fast)
-run
-add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/Enco_A_r3
-add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/Enco_B_r3
-restart
-run
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# 
-# Loading work.encoder_test_vlg_tst(fast)
-# Loading work.encoder_test(fast)
-add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/Enco_A_r2
-add wave -position insertpoint  \
-sim:/encoder_test_vlg_tst/i1/Enco_B_r2
-restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# 
-# Loading work.encoder_test_vlg_tst(fast)
-# Loading work.encoder_test(fast)
-run
+# ** Note: $stop    : E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test.vt(65)
+#    Time: 10100 ns  Iteration: 0  Instance: /encoder_test_vlg_tst
+# Break in Module encoder_test_vlg_tst at E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test.vt line 65
+# End time: 23:17:16 on Feb 15,2021, Elapsed time: 0:12:28
+# Errors: 0, Warnings: 2

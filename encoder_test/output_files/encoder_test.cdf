@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP3C16Q240) Path("C:/Users/22357/Desktop/encoder_test/output_files/") File("encoder_test.sof") MfrSpec(OpMask(1));
+		Device PartName(EP3C16Q240) Path("E:/GIT/Motion Controller/encoder_test/output_files/") File("encoder_test.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

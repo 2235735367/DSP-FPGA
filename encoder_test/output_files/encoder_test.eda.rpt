@@ -1,5 +1,5 @@
 EDA Netlist Writer report for encoder_test
-Sun Feb 07 19:23:36 2021
+Mon Feb 15 23:47:15 2021
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Feb 07 19:23:36 2021 ;
+; EDA Netlist Writer Status ; Successful - Mon Feb 15 23:47:15 2021 ;
 ; Revision Name             ; encoder_test                          ;
 ; Top-level Entity Name     ; encoder_test                          ;
 ; Family                    ; Cyclone III                           ;
@@ -66,20 +66,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                    ;
-+-----------------------------------------------------------------------------------------------+
-; Generated Files                                                                               ;
-+-----------------------------------------------------------------------------------------------+
-; C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test_8_1200mv_85c_slow.vo     ;
-; C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test_8_1200mv_0c_slow.vo      ;
-; C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test_min_1200mv_0c_fast.vo    ;
-; C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test.vo                       ;
-; C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test_8_1200mv_85c_v_slow.sdo  ;
-; C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test_8_1200mv_0c_v_slow.sdo   ;
-; C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test_min_1200mv_0c_v_fast.sdo ;
-; C:/Users/22357/Desktop/encoder_test/simulation/modelsim/encoder_test_v.sdo                    ;
-+-----------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                      ;
++-------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                 ;
++-------------------------------------------------------------------------------------------------+
+; E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test_8_1200mv_85c_slow.vo     ;
+; E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test_8_1200mv_0c_slow.vo      ;
+; E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test_min_1200mv_0c_fast.vo    ;
+; E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test.vo                       ;
+; E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test_8_1200mv_85c_v_slow.sdo  ;
+; E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test_8_1200mv_0c_v_slow.sdo   ;
+; E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test_min_1200mv_0c_v_fast.sdo ;
+; E:/GIT/Motion Controller/encoder_test/simulation/modelsim/encoder_test_v.sdo                    ;
++-------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,20 +88,20 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Sun Feb 07 19:23:34 2021
+    Info: Processing started: Mon Feb 15 23:47:14 2021
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off encoder_test -c encoder_test
-Info (204019): Generated file encoder_test_8_1200mv_85c_slow.vo in folder "C:/Users/22357/Desktop/encoder_test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file encoder_test_8_1200mv_0c_slow.vo in folder "C:/Users/22357/Desktop/encoder_test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file encoder_test_min_1200mv_0c_fast.vo in folder "C:/Users/22357/Desktop/encoder_test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file encoder_test.vo in folder "C:/Users/22357/Desktop/encoder_test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file encoder_test_8_1200mv_85c_v_slow.sdo in folder "C:/Users/22357/Desktop/encoder_test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file encoder_test_8_1200mv_0c_v_slow.sdo in folder "C:/Users/22357/Desktop/encoder_test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file encoder_test_min_1200mv_0c_v_fast.sdo in folder "C:/Users/22357/Desktop/encoder_test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file encoder_test_v.sdo in folder "C:/Users/22357/Desktop/encoder_test/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file encoder_test_8_1200mv_85c_slow.vo in folder "E:/GIT/Motion Controller/encoder_test/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file encoder_test_8_1200mv_0c_slow.vo in folder "E:/GIT/Motion Controller/encoder_test/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file encoder_test_min_1200mv_0c_fast.vo in folder "E:/GIT/Motion Controller/encoder_test/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file encoder_test.vo in folder "E:/GIT/Motion Controller/encoder_test/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file encoder_test_8_1200mv_85c_v_slow.sdo in folder "E:/GIT/Motion Controller/encoder_test/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file encoder_test_8_1200mv_0c_v_slow.sdo in folder "E:/GIT/Motion Controller/encoder_test/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file encoder_test_min_1200mv_0c_v_fast.sdo in folder "E:/GIT/Motion Controller/encoder_test/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file encoder_test_v.sdo in folder "E:/GIT/Motion Controller/encoder_test/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4571 megabytes
-    Info: Processing ended: Sun Feb 07 19:23:36 2021
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4565 megabytes
+    Info: Processing ended: Mon Feb 15 23:47:15 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
